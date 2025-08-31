@@ -2,8 +2,8 @@
 import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import neckPainImg from "../assets/pain1.jpg";
-import backPainImg from "../assets/pain2.jpg";
-import shoulderPainImg from "../assets/pain3.jpg";
+import backPainImg from "../assets/Pain2.jpg";
+import shoulderPainImg from "../assets/Pain3.jpg";
 
 const PainSection = () => {
   const cards = [
@@ -113,7 +113,7 @@ const PainSection = () => {
   }, []);
 
   return (
-    <section className="min-h-screen flex flex-col items-center justify-center bg-gray-900 text-white px-4 sm:px-6 lg:px-12">
+    <section className="min-h-screen flex flex-col items-center justify-center pt-[35px] bg-gray-900 text-white px-4 sm:px-6 lg:px-12">
       {/* Title */}
       <h1 className="text-center text-3xl sm:text-4xl lg:text-5xl font-bold">
         Where Does It Hurt the Most?

@@ -34,7 +34,7 @@ const Nav = () => {
 
         {/* Buttons */}
         <div className="flex items-center text-base font-medium text-white gap-4 sm:gap-6">
-          <button className="bg-[#2A2AFF] px-4 sm:px-6 py-2 rounded-full cursor-pointer">
+          <button className="bg-[#2A2AFF] px-4 sm:px-3 text-[10px] py-1 rounded-full cursor-pointer">
             Buy Now
           </button>
           <div className="flex items-center gap-3">

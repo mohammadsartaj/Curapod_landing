@@ -35,7 +35,7 @@ const testimonials = [
 
 const Review = () => {
   return (
-    <div className="min-h-screen bg-black text-white px-10 py-20 overflow-hidden relative">
+    <div className="min-h-screen bg-black text-white px-4 sm:px-8 md:px-12 py-16 overflow-hidden relative">
       {/* Inline custom keyframes */}
       <style>
         {`
@@ -59,13 +59,13 @@ const Review = () => {
           .scroll-wrapper:hover .scroll-right {
             animation-play-state: paused;
           }
-          /* Fade effect on both edges */
+          /* Fade edges */
           .fade-mask::before,
           .fade-mask::after {
             content: "";
             position: absolute;
             top: 0;
-            width: 120px; /* fade width */
+            width: 80px;
             height: 100%;
             pointer-events: none;
             z-index: 10;
@@ -81,34 +81,37 @@ const Review = () => {
         `}
       </style>
 
-      <h1 className="text-4xl font-bold text-center mb-16">
+      <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center mb-12">
         “Curapod Stories from Real Users”
       </h1>
 
       {/* Row 1 - scrolls left */}
-      <div className="relative w-full overflow-hidden scroll-wrapper cursor-pointer fade-mask mb-12">
+      <div className="relative w-full overflow-hidden scroll-wrapper cursor-pointer fade-mask mb-10">
         <div className="flex w-max scroll-left">
           {[...testimonials, ...testimonials].map((t, i) => (
             <Card
               key={`row1-${i}`}
-              className="flex-shrink-0 mx-4 rounded-2xl shadow-lg"
+              className="flex-shrink-0 mx-3 sm:mx-4 rounded-2xl shadow-lg bg-white text-black"
               style={{
-                width: "460px",
-                height: "290px",
-                boxShadow: "0px 0px 5px 0px #ffff",
+                width: "300px",
+                height: "auto",
               }}
             >
-              <CardContent className="flex flex-col h-full p-6">
-                <h2 className="text-lg font-semibold mb-4">{t.title}</h2>
-                <p className="text-sm text-gray-700 mb-4 flex-grow">{t.text}</p>
+              <CardContent className="flex flex-col h-full p-4 sm:p-6">
+                <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-3">
+                  {t.title}
+                </h2>
+                <p className="text-sm sm:text-base text-gray-700 mb-3 flex-grow">
+                  {t.text}
+                </p>
                 <div>
-                  <p className="font-medium">{t.name}</p>
+                  <p className="font-medium text-sm sm:text-base">{t.name}</p>
                   <p className="text-xs text-gray-500">{t.date}</p>
                   <div className="flex mt-2">
                     {Array.from({ length: t.rating }).map((_, idx) => (
                       <Star
                         key={idx}
-                        className="text-yellow-400 fill-yellow-400 w-5 h-5"
+                        className="text-yellow-400 fill-yellow-400 w-4 h-4 sm:w-5 sm:h-5"
                       />
                     ))}
                   </div>
@@ -125,24 +128,27 @@ const Review = () => {
           {[...testimonials, ...testimonials].map((t, i) => (
             <Card
               key={`row2-${i}`}
-              className="flex-shrink-0 mx-4 rounded-2xl shadow-lg"
+              className="flex-shrink-0 mx-3 sm:mx-4 rounded-2xl shadow-lg bg-white text-black"
               style={{
-                width: "460px",
-                height: "290px",
-                boxShadow: "0px 0px 5px 0px #ffff",
+                width: "300px",
+                height: "auto",
               }}
             >
-              <CardContent className="flex flex-col h-full p-6">
-                <h2 className="text-lg font-semibold mb-4">{t.title}</h2>
-                <p className="text-sm text-gray-700 mb-4 flex-grow">{t.text}</p>
+              <CardContent className="flex flex-col h-full p-4 sm:p-6">
+                <h2 className="text-base sm:text-lg md:text-xl font-semibold mb-3">
+                  {t.title}
+                </h2>
+                <p className="text-sm sm:text-base text-gray-700 mb-3 flex-grow">
+                  {t.text}
+                </p>
                 <div>
-                  <p className="font-medium">{t.name}</p>
+                  <p className="font-medium text-sm sm:text-base">{t.name}</p>
                   <p className="text-xs text-gray-500">{t.date}</p>
                   <div className="flex mt-2">
                     {Array.from({ length: t.rating }).map((_, idx) => (
                       <Star
                         key={idx}
-                        className="text-yellow-400 fill-yellow-400 w-5 h-5"
+                        className="text-yellow-400 fill-yellow-400 w-4 h-4 sm:w-5 sm:h-5"
                       />
                     ))}
                   </div>
