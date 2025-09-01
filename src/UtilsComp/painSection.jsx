@@ -3,7 +3,7 @@ import React, { useRef, useEffect } from "react";
 import { gsap } from "gsap";
 import neckPainImg from "../assets/pain1.jpg";
 import backPainImg from "../assets/Pain2.jpg";
-import shoulderPainImg from "../assets/Pain3.jpg";
+import shoulderPainImg from "../assets/pain3.jpg";
 
 const PainSection = () => {
   const cards = [
